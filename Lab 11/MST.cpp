@@ -24,15 +24,15 @@ int minKey(int key[], bool mstSet[]){
 }
 
 //Print the MST
-int printMST(int source[], int n, int graph[V][V]){
+void printMST(int source[], int n, int graph[V][V]){
 
-    for (int i=1; i<V; i++){
-        cout<< "Edge: " << source[i] << " - " << i<<"   "<<"Weight: "<< graph[i][source[i]]<<endl;
-    }
+    printf("Edge\t: Weight\n");
+    for (int i = 1; i < V; i++)
+        printf("%d - %d\t:   %d \n", source[i], i,
+               graph[i][source[i]]);
     
-    return 1;
-
 }
+
 
 //Construct MST for the given graph
 void primMST(int graph[V][V]){
